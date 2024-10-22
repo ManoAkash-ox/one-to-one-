@@ -4,7 +4,13 @@ const testingApp=  (req, res) => {
   const testingPost=  (req, res) => {
     res.send("Welcome to my project");
   };
+  const testingput=  (req, res) => {
+    res.send("Welcome to my project");
+  };
+ 
   module.exports={
     testingApp,
-    testingPost
+    testingPost,
+    testingput
+
   }
