@@ -1,9 +1,11 @@
 const express = require('express');
 const { PrismaClient } = require("@prisma/client");
+const { userRoute } = require('./routes/userRoutes');
 const prisma = new PrismaClient();
 require("dotenv").config();
 const app = express();
 app.use(express.json());
+app.use(userRoute);
 
 app.get("/", (req, res) => {
   res.send("Welcome to my project");
